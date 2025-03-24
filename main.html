@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Person and Employee Classes</title>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <h1>Person and Employee Greeting</h1>
+    <div>
+        <h3>Person Greeting:</h3>
+        <p id="person-greet"></p>
+    </div>
+    <div>
+        <h3>Employee Greeting:</h3>
+        <p id="employee-greet"></p>
+    </div>
 
+    <script type="text/javascript" src="./script.js"></script>
+    <script>
+        // Creating an instance of Person
+        const person = new Person("Alice", 25);
+        person.greet();
+
+        // Creating an instance of Employee
+        const employee = new Employee("Bob", 30, "Manager");
+        employee.jobGreet();
+
+        // Displaying the greetings on the web page
+        document.getElementById("person-greet").textContent = `Hello, my name is ${person.name}, I am ${person.age} years old.`;
+        document.getElementById("employee-greet").textContent = `Hello, my name is ${employee.name}, I am ${employee.age} years old, and my job title is ${employee.jobTitle}.`;
+    </script>
 </body>
 
 </html>
